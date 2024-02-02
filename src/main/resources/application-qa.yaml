@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: "jdbc:oracle:thin:@//<IP>:<PORT>/<DB_SERVICE>"
+    username: 
+    password: 
+    driver-class-name: oracle.jdbc.OracleDriver
+    hikari:
+      minimumIdle: "5"
+      maximumPoolSize: "20"
+      idleTimeout: "0"
+      maxLifetime: "0"
+      connectionTimeout: "30000"
+  jpa:
+    # Hibernate ddl auto (create, create-drop, validate, update, none)
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  servlet:
+    multipart:
+      max-file-size: 256MB
+      max-request-size: 256MB
+logging:
+  level:
+    root: info
